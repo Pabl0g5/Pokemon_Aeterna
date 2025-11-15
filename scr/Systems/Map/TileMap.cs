@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text.Json.Nodes;
 using Newtonsoft.Json.Linq;
+using System.Security.Cryptography.X509Certificates;
+using System;
 
 public class TileMap
 {
@@ -14,6 +16,11 @@ public class TileMap
     private Tile[,] _tiles;
     private ContentManager _content;
 
+    public TileMap(string jsonPath, ContentManager content)
+    {
+        _content = content ?? throw new ArgumentNullException(nameof(content));
+        LoadMap(jsonPath);
+    }
     public TileMap(string jsonPath)
     {
         LoadMap(jsonPath);

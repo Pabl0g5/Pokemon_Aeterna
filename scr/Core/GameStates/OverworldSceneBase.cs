@@ -18,13 +18,14 @@ public abstract class OverworldSceneBase : IGameState
 
     public OverworldSceneBase(Game1 game1, GameStateManager manager, EncounterType encounterType)
     {
+        _game = game1;
         _manager = manager;
         _encounterType = encounterType;
     }
 
     public virtual void LoadContent()
     {
-        _map = new TileMap("Content/Maps/route1.json");
+        _map = new TileMap("Content/Maps/route1.json", _game.Content);
         _player = new Player(new Vector2(100, 100));
     }
 
