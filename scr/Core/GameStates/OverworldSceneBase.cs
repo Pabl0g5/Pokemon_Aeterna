@@ -1,4 +1,5 @@
 using System;
+using System.Data;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Pokémon_Æterna;
@@ -63,7 +64,7 @@ public virtual void Draw(SpriteBatch spriteBatch)
 
         if (_encounterType == EncounterType.OnSpecificTiles)
         {
-            var currentTile = TileMap.GetTileAt(_player.Position);
+            var currentTile = _map.GetTileAt(_player.Position);
             if (currentTile != null && currentTile.HasProperty("ValidEncounter"))
                 return _random.NextDouble() < chance;
             else

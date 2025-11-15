@@ -55,19 +55,18 @@ public class TileMap
         var map = JObject.Parse(json);
 
         _tileWidth = (int)map["tilewidth"];
-        _tileHeight = (int)map["Tileheight"];
+        _tileHeight = (int)map["tileheight"];
         _mapWidth = (int)map["widht"];
         _mapHeight = (int)map["height"];
 
         string tilesetPath = "Content/Tilesets/overworld";
         _tileset = _content.Load<Texture2D>(tilesetPath);
-
         _tiles = new Tile[_mapWidth, _mapHeight];
 
         var layers = map["layers"];
         foreach (var layer in layers)
         {
-            if ((string)layer["Type"] == "tilelayer")
+            if ((string)layer["type"] == "tilelayer")
             {
                 var data = layer["data"].ToObject<int[]>();
                 for (int y = 0; y < _mapHeight; y++)
