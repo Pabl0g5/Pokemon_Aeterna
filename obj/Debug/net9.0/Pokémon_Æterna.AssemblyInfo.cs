@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Pokémon_Æterna")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f517799a32a384035b9d462c6255f78607257644")]
 [assembly: System.Reflection.AssemblyProductAttribute("Pokémon_Æterna")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Pokémon_Æterna")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
